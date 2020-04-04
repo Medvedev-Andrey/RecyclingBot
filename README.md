@@ -10,7 +10,7 @@ The goal of this project is to create and maintain a [Telegram](https://www.tele
 Project targets .NET Core 2.1
 
 ## ☁️ Deployment
-Project is deployed in the [DigitalOcean](https://www.digitalocean.com/)
+Project is deployed in the [Heroku](https://www.heroku.com/)
 
 ## 🧪 Tests
 Project uses [NUnit](https://nunit.org/) in order to test functionality and infrastructure. Tests are executed after each repository update
