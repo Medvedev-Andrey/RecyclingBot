@@ -3,9 +3,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 using RecyclingBot.Control;
 using RecyclingBot.Control.Handlers;
+using RecyclingBot.Control.Handlers.Wiki;
+using RecyclingBot.Control.Handlers.Wiki.Tips;
+using RecyclingBot.Control.Handlers.Wiki.FractionsInfo;
+using RecyclingBot.Control.Handlers.Wiki.Sources;
+using RecyclingBot.Control.Handlers.RecyclingCodeRecognition;
+using System;
 using Telegram.Bot.Framework;
 using Telegram.Bot.Framework.Abstractions;
 
@@ -63,7 +68,20 @@ namespace RecyclingBot
     {
       return new BotBuilder()
         .Use<FaultedUpdateHandler>()
-        .UseCommand<RecyclingBotCommand>("recycling");
+        .UseWhen<StartHandler>(StartHandler.CanHandle)
+        .UseWhen<WikiHandler>(WikiHandler.CanHandle)
+        .UseWhen<TipsHandler>(TipsHandler.CanHandle)
+        .UseWhen<RandomTipHandler>(RandomTipHandler.CanHandle)
+        .UseWhen<SearchTipHandler>(SearchTipHandler.CanHandle)
+        .UseWhen<NavigateTipsHandler>(NavigateTipsHandler.CanHandle)
+        .UseWhen<FractionsInfoHandler>(FractionsInfoHandler.CanHandle)
+        .UseWhen<RandomFractionInfoHandler>(RandomFractionInfoHandler.CanHandle)
+        .UseWhen<SearchFractionInfoHandler>(SearchFractionInfoHandler.CanHandle)
+        .UseWhen<SourcesHandler>(SourcesHandler.CanHandle)
+        .UseWhen<WasteContainerSearchHandler>(WasteContainerSearchHandler.CanHandle)
+        .UseWhen<RecyclingCodeRecognitionHandler>(RecyclingCodeRecognitionHandler.CanHandle)
+        .UseWhen<RecyclingCodeSearchHandler>(RecyclingCodeSearchHandler.CanHandle)
+        .UseWhen<RecyclingCodeFromPhotoHandler>(RecyclingCodeFromPhotoHandler.CanHandle);
     }
   }
 }
