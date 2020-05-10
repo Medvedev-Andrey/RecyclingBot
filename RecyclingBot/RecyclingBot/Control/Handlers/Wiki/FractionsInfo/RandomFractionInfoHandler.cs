@@ -1,6 +1,9 @@
-﻿using RecyclingBot.Control.Common;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using RecyclingBot.Control.Common;
+using RecyclingBot.Control.Handlers.Wiki.FractionsInfo.Info;
+using RecyclingBot.Properties;
 using Telegram.Bot.Framework.Abstractions;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
@@ -30,31 +33,43 @@ namespace RecyclingBot.Control.Handlers.Wiki.FractionsInfo
 
     public async Task HandleAsync(IUpdateContext context, UpdateDelegate next, CancellationToken cancellationToken)
     {
-      UpdateType updateType = context?.Update?.Type ?? UpdateType.Unknown;
-
-      switch (updateType)
+      int count = FractionsInfoWiki.Available.Count;
+      if (count <= 0)
       {
-        case UpdateType.Message:
-        {
-          await context.Bot.Client.SendTextMessageAsync(
-            chatId: context.Update.Message.Chat.Id,
-            text: "Here is random fraction info for you"
-          );
+        return;
+      }
 
-          break;
-        }
+      //  Get random fraction info
+      int randomFractionInfo = Randomizer.Instance.Next(0, count);
+      IFractionInfo fractionInfo = FractionsInfoWiki.Available[randomFractionInfo];
 
-        case UpdateType.CallbackQuery:
-        {
-          await context.Bot.Client.EditMessageTextAsync(
-            chatId: context.Update.CallbackQuery.Message.Chat.Id,
+      long chatId;
+      UpdateType updateType = context?.Update?.Type ?? UpdateType.Unknown;
+      if (updateType == UpdateType.CallbackQuery)
+      {
+        chatId = context.Update.CallbackQuery.Message.Chat.Id;
+        await context.Bot.Client.EditMessageTextAsync(
+            chatId: chatId,
             messageId: context.Update.CallbackQuery.Message.MessageId,
-            text: "Here is random fraction info for you",
+            text: fractionInfo.Topic,
             replyMarkup: InlineKeyboardMarkup.Empty()
           );
+      }
+      else
+      {
+        chatId = context.Update.Message.Chat.Id;
+        await context.Bot.Client.SendTextMessageAsync(
+              chatId: chatId,
+              text: fractionInfo.Topic
+            );
+      }
 
-          break;
-        }
+      foreach (string fractionInfoItem in FractionsInfoHandler.FormatFractionInfo(fractionInfo))
+      {
+        await context.Bot.Client.SendTextMessageAsync(
+              chatId: chatId,
+              text: fractionInfoItem
+            );
       }
     }
   }

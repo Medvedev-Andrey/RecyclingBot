@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GlassFractionInfo_HowToRecycle" xml:space="preserve">
+    <value>How To Recycle It?
+
+Look for curbside, school, or work recycling bins or find a local recycling drop-off center — and be sure to check local recycling ordinances. In some states, beverage containers have a deposit refund and can be returned to the store where they were purchased. 
+
+Many recycling centers ask that you give food containers a quick rinse, remove all non-glass parts and sort the glass by color. </value>
+  </data>
+  <data name="GlassFractionInfo_Topic" xml:space="preserve">
+    <value>Glass</value>
+  </data>
+  <data name="GlassFractionInfo_WhatCanBeRecycled" xml:space="preserve">
+    <value>What Types Of Glass I Can Recycle?
+
+Glass can be produced with a variety of formulas and processes for different purposes. The glass used in food packaging is generally soda-lime glass, but kitchenware, for example, can be made with borosilicate for use with extreme temperature changes. Likewise, window glass is produced differently for durability. Unfortunately, these kinds of glass all have different melting points and contain additional components, meaning they can’t usually be processed for recycling together without the risk of them damaging equipment or contaminating each other and compromising the structural integrity of the recycled glass — and after all, you wouldn’t want a recycled drinking glass to crumble in your hands.
+
+</value>
+  </data>
+  <data name="GlassFractionInfo_WhyCollect" xml:space="preserve">
+    <value>Why Collect?
+
+Glass Recycling Is Good for the Environment
+A glass bottle that is sent to a landfill can take up to a million years to break down. By contrast, it takes as little as 30 days for a recycled glass bottle to leave your kitchen recycling bin and appear on a store shelf as a new glass container.
+
+Glass Recycling is Sustainable
+Glass containers are 100-percent recyclable, which means they can be recycled repeatedly, again and again, with no loss of purity or quality in the glass.
+
+Glass Recycling is Efficient
+Recovered glass from glass recycling is the primary ingredient in all new glass containers. A typical glass container is made of as much as 70 percent recycled glass. According to industry estimates, 80 percent of all recycled glass eventually ends up as new glass containers.
+
+Glass Recycling Conserves Natural Resources
+Every ton of glass that is recycled saves more than a ton of the raw materials needed to create new glass, including 1,300 pounds of sand; 410 pounds of soda ash; and 380 pounds of limestone.
+
+Glass Recycling Saves Energy
+Making new glass means heating sand and other substances to a temperature of 2,600 degrees Fahrenheit, which requires a lot of energy and creates a lot of industrial pollution, including greenhouse gases. One of the first steps in glass recycling is to crush the glass and create a product called “cullet.” Making recycled glass products from cullet consumes 40 percent less energy than making new glass from raw materials because cullet melts at a much lower temperature.
+
+Recycled Glass is Useful
+Because glass is made from natural and stable materials such as sand and limestone, glass containers have a low rate of chemical interaction with their contents. As a result, glass can be safely reused, for example as refillable water bottles. It can even be used to make fences and walls. Besides serving as the primary ingredient in new glass containers, recycled glass also has many other commercial uses -- from creating decorative tiles and landscaping material to rebuilding eroded beaches.
+
+Glass Recycling is Simple
+It's a simple environmental benefit because glass is one of the easiest materials to recycle. For one thing, glass is accepted by almost all curbside recycling programs and municipal recycling centers. Sometimes different color glasses have to be separated to maintain cullet uniformity.
+
+Glass Recycling Pays
+In some areas glass recycling can actually put a little extra money in your pocket.</value>
+  </data>
+  <data name="LampFractionInfo_HowToRecycle" xml:space="preserve">
+    <value>How To Recycle Incandescent Light Bulbs
+Incandescent light bulbs usually don’t contain any hazardous chemicals. Because of this, they are pretty easy to recycle. Simply place your burnt out light bulbs in the recycling bin or drop off at the nearest recycling center. If broken, please wrap in some sort of padding for safety.
+
+How To Recycle Halogen Light Bulbs
+Commonly used as outdoor flood lights, halogen bulbs are more advanced than regular incandescents. While they are more efficient, they burn at a higher temperature and cost more. These bulbs usually don’t contain hazardous materials and can safely be recycled. Place them in the recycling bin or drop off at a recycler.
+
+How To Recycle LED Light Bulbs
+These bulbs are 90% more efficient than incandescents and contain no hazardous chemicals. This makes disposing of LED light bulbs easy. While you can safely throw them away in a trash or recycling can, these bulbs have recyclable components. So take them to your local recycler instead to make sure they’re put to good use.
+
+How To Recycle Fluorescent Light Bulbs
+You might be wondering, “Can I put fluorescent light bulbs in the trash?” The answer is no. These bulbs contain about 4 milligrams of mercury, a toxic metal. Broken CFL bulbs can be hazardous to the environment and water supply if left in a landfill (for information about what to do when a light bulb breaks, check out our blog here). Because of their toxicity, don’t throw these light bulbs in with other trash or recycle items. You must keep fluorescent light bulbs separate when recycling. Bring them to the nearest qualified recycling center.</value>
+  </data>
+  <data name="LampFractionInfo_Topic" xml:space="preserve">
+    <value>Lamps</value>
+  </data>
+  <data name="LampFractionInfo_WhyCollect" xml:space="preserve">
+    <value>Legal Requirements
+Many states require lamp recycling and proper disposal of ballasts, batteries, and electronic waste by law. Make sure you are compliant with your state regulations.
+
+The Environment
+Fluorescent lamps contain mercury, and ballasts, batteries, and electronic waste can contain mercury, lead, metals, and other materials which have a harmful effect on the environment if not recycled.
+
+Recycling is Cost Effective
+Over the lifecycle of a fluorescent lamp, the cost to recycle is less than 1% of the cost of ownership. Recycling your lamps and obtaining a certificate of recycling is also a guaranteed way to avoid fines and costly enforcement action which can easily exceed the cost of lamp recycling.</value>
+  </data>
+  <data name="MetalFractionInfo_HowToRecycle" xml:space="preserve">
+    <value>With scrap metal, the general rule is a product needs to be at least 50 percent metal. Even if that metal is surrounded by other materials like plastic, it’s worth recycling if it’s made mostly out of metal.
+
+If you have products with only a small amount of metal but it’s easy to remove, separate the metal. For example, a plastic three-ring binder is not scrap metal, but remove the metal rings and now you’re talking.
+
+Scrap metal is classified as either ferrous (containing iron, such as steel) and nonferrous (everything else). So, you’ll want to identify whether your metal is ferrous or nonferrous. The way to do this is with a magnet. Ferrous metals stick to a magnet; nonferrous metals don’t.
+
+Most scrap metal recyclers will require you to bring identification when you recycle. This is to prevent people from stealing scrap metal (e.g., road signs, metal barriers) and selling it for scrap.</value>
+  </data>
+  <data name="MetalFractionInfo_Topic" xml:space="preserve">
+    <value>Metal</value>
+  </data>
+  <data name="MetalFractionInfo_WhyCollect" xml:space="preserve">
+    <value>Scrap Reuse
+By definition, mining metal ores and refining them into usable metals is unsustainable; the amount of metals present on earth is fixed when considering (at least when considering any useful geological time scale). However, metals are easily recycled and reused, providing renewed opportunities for their use without having to mine and refine more of it. Thus, issues associated with mining like can be avoided, like acid mine drainage. By recycling, we reduce the need to manage extensive and potential dangerous piles of mine tailings. 
+
+Economy Support
+In 2008, the scrap recycling industry generated $86 billion and supported 85,000 jobs. The recycled materials that the industry processes into raw material feedstock every year are used for industrial manufacturing around the world. For example, 25% of the steel used in production car panels (doors, hood, etc.) is obtained from recycled materials. For copper, used in the home building industry for electric wires and plumbing pipes, that proportion surpasses 50%.
+
+Metal Recycling Saves Energy and Natural Resources
+Recycling scrap metal reduces the substantial amounts of greenhouse gas emissions produced during the various smelting and processing operations used when making metal from virgin ore. At the same time, the amount of energy used is also much smaller. Energy savings using various recycled metals compared to virgin ore is up to:
+
+-- 92 percent for aluminum
+-- 90 percent for copper
+-- 56 percent for steel
+
+These savings are significant, especially when scaled up to large production capacities. Indeed, according to the U.S. Geological Survey, 60% of steel production comes directly from recycled iron and steel scrap. For copper, the proportion coming from recycled materials reaches 50%. </value>
+  </data>
+  <data name="PaperFractionInfo_HowToRecycle" xml:space="preserve">
+    <value>Avoid getting paper wet, as this significantly reduces the recycling market. If your curbside program accepts all materials in the same bin/cart, empty your containers before tossing them in so they don’t drain on your paper. If there’s rain in the forecast, wait until the morning of collection to put your bin at the curb.
+
+If possible, use a black marker to remove sensitive information instead of shredding paper. Ink is easily removed in the recycling process, but shredding paper reduces the fiber lengths, making it more difficult to recycle into new paper.
+
+Verify what types of paper are accepted in your area, as some communities only accept certain grades. Definitely check to see if your community accepts paper lined with plastic, such as frozen food boxes and cartons.
+
+In the case of boxes (cardboard and paperboard), break them down to save room in your recycling bin.</value>
+  </data>
+  <data name="PaperFractionInfo_Topic" xml:space="preserve">
+    <value>Paper</value>
+  </data>
+  <data name="PaperFractionInfo_WhyCollect" xml:space="preserve">
+    <value>Incineration Reduction
+Besides saving landfill space, when people recycle paper, there's reduced need for trash incineration. Some municipalities burn trash rather than storing it in landfills. By diverting paper out of the trash stream, there is less to burn, so there's less need for incinerators and less ash output and air pollution.
+
+Energy Conservation
+Manufacturing paper from recycled paper fiber requires less energy than making paper from virgin wood pulp. In fact, making recycled paper is estimated to use 60 to 70 percent less energy, and the paper industry is the third largest user of energy in the U.S. In addition to saving energy, recycled paper manufacturing uses about 50 percent less water than its virgin counterpart and significantly reduces water pollution in the process as well.
+
+It's Easy
+Recycling paper and paper products is very easy. Although not all centers or pick-up services take all types of paper, the majority, if not all, will accept newspapers. Newspapers alone take up over ten percent of the landfill space.
+
+It's Versatile
+People should recycle paper because there's a wide range of products that can be created from recycled paper. Although paper fibers cannot be recycled indefinitely, like glass and aluminum, it is possible to recycle paper fibers about six or seven times. Each time paper is recycled, it becomes a lesser grade but is still a useful product. By the end of the fibers' usefulness, they can be made into pressboard, tissue or even insulation.</value>
+  </data>
+  <data name="PlasticFractionInfo_HowToRecycle" xml:space="preserve">
+    <value>Recycling by the Numbers 
+The symbol code we are familiar with — digits ranging from 1 to 7 surrounded by a triangle of arrows — was designed by The Society of the Plastics Industry (SPI) in 1988 to allow consumers and recyclers to differentiate types of plastics while providing a uniform coding system for manufacturers.
+
+PET
+The easiest and most common plastics to recycle are made of polyethylene terephthalate (PET) and are assigned the number 1. Examples include soda and water bottles, medicine containers, and many other common consumer product containers.
+
+HDPE (High-density polyethylene plastics)
+Number 2 is reserved for high-density polyethylene plastics (HDPE). These include heavier containers that hold laundry detergents and bleaches as well as milk, shampoo, and motor oil.
+
+V (Vinyl)
+Polyvinyl chloride, commonly used in plastic pipes, shower curtains, medical tubing, vinyl dashboards, gets number 3.
+
+LDPE (Low-density polyethylene)
+Low-density polyethylene (LDPE) is number 4 and is used to make thin, flexible plastics like wrapping films, grocery bags, sandwich bags, and a variety of soft packaging materials.
+
+PP (Polypropylene)
+Some food containers are made with the stronger polypropylene plastic (number 5) as well as a large proportion of plastic caps.
+
+PS (Polystyrene)
+Number 6 goes on polystyrene (commonly called Styrofoam) items such as coffee cups, disposable cutlery, meat trays, packing “peanuts” and insulation. It can be reprocessed into many items, including rigid insulation. However, the foam versions of plastic #6 (for example, cheap coffee cups) pick up a lot of dirt and other contaminants during the handling process, and often just ends up being thrown away at the recycling facility. 
+
+Others
+Last, are items crafted from various combinations of the aforementioned plastics or from unique plastic formulations not commonly used. Usually imprinted with a number 7 or nothing at all, these plastics are the most difficult to recycle. If your municipality accepts #7, good, but otherwise you will have to re-purpose the object or throw it in the trash. Better yet, do not buy it in the first place. More ambitious consumers can feel free to return such items to the product manufacturers to avoid contributing to the local waste stream, and instead, put the burden on the makers to recycle or dispose of the items properly.</value>
+  </data>
+  <data name="PlasticFractionInfo_Topic" xml:space="preserve">
+    <value>Plastic</value>
+  </data>
+  <data name="PlasticFractionInfo_WhyCollect" xml:space="preserve">
+    <value>Plastic Use Is Growing
+As the use of plastics has increased over the years, they have become a larger part of our nation's municipal solid waste (MSW)—growing from less than 1% in 1960 to more than 13% in 2013, according to a report by the Environmental Protection Agency.
+
+It Conserves Natural Resources and Energy
+Recycling plastics reduces the amount of energy and resources (such as water, petroleum, natural gas, and coal) needed to create plastic. According to a 2009 study by researchers Peter Gleick and Heather Cooley from the Pacific Institute of California, a pint-sized bottle of water requires about 2,000 times as much energy to produce as the same amount of tap water.
+
+Recycling Plastics Saves Landfill Space
+Recycling plastic products also keeps them out of landfills. Recycling one ton of plastic saves 7.4 cubic yards of landfill space. That's not to mention the discarded plastic that ends up directly in the environment, breaking down into tiny pieces to pollute our soil and water and contribute to the oceans' Great Garbage Patches.
+
+Chemicals
+Many plastic products contain dangerous chemicals and compounds, including Bisphenol A (BPA). When exposed to heat, these chemicals have been known to leach from the plastic and have the potential to adversely affect any nearby water supply. When plastic is incinerated, it releases toxic chemicals – including BPA – into the air we breathe. In turn, this can create a variety of health problems, particularly for the young and the elderly.
+
+It's Relatively Easy
+Recycling plastics has never been easier. Today, people have easy access to a plastics recycling program, whether they participate in a municipal curbside program or live near a drop-off site. A universal numbering system for plastic types makes it even easier.</value>
+  </data>
+</root>

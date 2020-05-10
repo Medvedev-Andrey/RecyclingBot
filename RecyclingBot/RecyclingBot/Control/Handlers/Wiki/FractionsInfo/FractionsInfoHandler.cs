@@ -1,5 +1,7 @@
 ﻿using RecyclingBot.Control.Common;
 using RecyclingBot.Control.Common.Markup;
+using RecyclingBot.Control.Handlers.Wiki.FractionsInfo.Info;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 using Telegram.Bot.Framework.Abstractions;
@@ -58,6 +60,14 @@ namespace RecyclingBot.Control.Handlers.Wiki.FractionsInfo
 
           break;
         }
+      }
+    }
+
+    internal static IEnumerable<string> FormatFractionInfo(IFractionInfo fractionInfo)
+    {
+      foreach (string fractionInfoItem in fractionInfo.AllInfo)
+      {
+        yield return fractionInfoItem;
       }
     }
   }

@@ -12,4 +12,19 @@
     <PackageReference Include="Telegram.Bot.Framework" Version="2.0.0-alpha5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Properties\FractionInfoResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>FractionInfoResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\FractionInfoResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FractionInfoResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>
