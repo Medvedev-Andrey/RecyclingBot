@@ -1,19 +1,21 @@
-﻿using System.Drawing;
-using System.Security.Policy;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
-using RecyclingBot.Control.Common;
-using RecyclingBot.Control.Common.Markup;
 using RecyclingBot.Control.Common.Photo;
 using RecyclingBot.Control.Handlers.RecyclingCodeRecognition.CodeRecognition;
 using Telegram.Bot.Framework.Abstractions;
 using Telegram.Bot.Types.Enums;
-using Telegram.Bot.Types.ReplyMarkups;
 
 namespace RecyclingBot.Control.Handlers.RecyclingCodeRecognition
 {
   public class PhotoWithRecyclingCodeHandler : IUpdateHandler
   {
+    private readonly CodeRecognitionModelController _codeRecognitionModelController;
+
+    public PhotoWithRecyclingCodeHandler(CodeRecognitionModelController codeRecognitionModelController)
+    {
+      _codeRecognitionModelController = codeRecognitionModelController;
+    }
+
     public static bool CanHandle(IUpdateContext context)
     {
       UpdateType updateType = context?.Update?.Type ?? UpdateType.Unknown;
@@ -36,7 +38,8 @@ namespace RecyclingBot.Control.Handlers.RecyclingCodeRecognition
       long chatId = context?.Update?.Message?.Chat?.Id ?? -1;
       RecyclingCodeFromPhotoHandler.ChatIdsAwaitingForPhoto.Remove(chatId);
 
-      if (!CodeRecognitionModelController.Instance.CanProcessImage)
+      bool canProcessMessage = _codeRecognitionModelController?.CanProcessImage ?? false;
+      if (!canProcessMessage)
       {
         await context.Bot.Client.SendTextMessageAsync(
           chatId: context.Update.Message.Chat.Id,
@@ -63,7 +66,7 @@ namespace RecyclingBot.Control.Handlers.RecyclingCodeRecognition
           ImagePath = photoHandler.FilePath
         };
 
-        CodeRecognitionResult codeRecognitionResult = CodeRecognitionModelController.Instance.Recognize(imageData);
+        CodeRecognitionResult codeRecognitionResult = _codeRecognitionModelController.Recognize(imageData);
         if (codeRecognitionResult == null || !codeRecognitionResult.SuccessfullyProcessedImage)
         {
           await context.Bot.Client.SendTextMessageAsync(

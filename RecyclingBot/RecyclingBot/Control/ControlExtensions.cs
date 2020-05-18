@@ -8,6 +8,7 @@ using RecyclingBot.Control.Handlers.Wiki.Sources;
 using RecyclingBot.Control.Handlers.RecyclingCodeRecognition;
 using RecyclingBot.Options;
 using Telegram.Bot.Framework;
+using RecyclingBot.Control.Handlers.RecyclingCodeRecognition.CodeRecognition;
 
 namespace RecyclingBot.Control
 {
@@ -33,7 +34,9 @@ namespace RecyclingBot.Control
         .AddScoped<WasteContainerSearchHandler>()
         .AddScoped<RecyclingCodeRecognitionHandler>()
         .AddScoped<RecyclingCodeSearchHandler>()
-        .AddScoped<RecyclingCodeFromPhotoHandler>();
+        .AddScoped<RecyclingCodeFromPhotoHandler>()
+        .AddScoped<PhotoWithRecyclingCodeHandler>()
+        .AddSingleton<CodeRecognitionModelController>();
     }
 
     public static IServiceCollection AddOperationServices(this IServiceCollection services)

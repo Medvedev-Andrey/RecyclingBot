@@ -16,7 +16,7 @@ namespace RecyclingBot.Control.Common.Photo
     {
       long chatId = message?.Chat?.Id ?? -1;
       ITelegramBotClient botClient = context?.Bot?.Client;
-      if (message == null || botClient == null || chatId >= 0)
+      if (message == null || botClient == null || chatId < 0)
       {
         return null;
       }

@@ -81,7 +81,8 @@ namespace RecyclingBot
         .UseWhen<WasteContainerSearchHandler>(WasteContainerSearchHandler.CanHandle)
         .UseWhen<RecyclingCodeRecognitionHandler>(RecyclingCodeRecognitionHandler.CanHandle)
         .UseWhen<RecyclingCodeSearchHandler>(RecyclingCodeSearchHandler.CanHandle)
-        .UseWhen<RecyclingCodeFromPhotoHandler>(RecyclingCodeFromPhotoHandler.CanHandle);
+        .UseWhen<RecyclingCodeFromPhotoHandler>(RecyclingCodeFromPhotoHandler.CanHandle)
+        .UseWhen<PhotoWithRecyclingCodeHandler>(PhotoWithRecyclingCodeHandler.CanHandle);
     }
   }
 }

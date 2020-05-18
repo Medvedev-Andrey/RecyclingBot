@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Internal;
 using Telegram.Bot;
 using File = Telegram.Bot.Types.File;
 
@@ -24,7 +25,11 @@ namespace RecyclingBot.Control.Common
       {
         string originalPath = file.FilePath;
         string fileName = originalPath.Substring(originalPath.LastIndexOf("/", StringComparison.Ordinal) + 1);
-        string pathToFile = $"{chatId}_{fileName}";
+
+        string pathToCodeRecognitionDirectory = Path.Combine(Environment.CurrentDirectory, "Code_recognition_photo");
+        string pathToFile = Path.Combine(pathToCodeRecognitionDirectory, $"{chatId}_{fileName}");
+
+        Directory.CreateDirectory(pathToCodeRecognitionDirectory);
         using (FileStream outputFile = System.IO.File.Create(pathToFile))
         {
           await botClient.DownloadFileAsync(originalPath, outputFile);

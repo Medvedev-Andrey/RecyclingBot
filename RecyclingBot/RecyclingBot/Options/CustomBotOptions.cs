@@ -10,5 +10,10 @@ namespace RecyclingBot.Options
     {
       get; set;
     }
+
+    public string CodeRecognitionModelFileName
+    {
+      get; set;
+    }
   }
 }

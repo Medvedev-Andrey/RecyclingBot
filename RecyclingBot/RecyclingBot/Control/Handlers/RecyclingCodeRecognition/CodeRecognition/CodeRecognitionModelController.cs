@@ -1,22 +1,36 @@
 ﻿using System;
+using Microsoft.Extensions.Options;
 using Microsoft.ML;
+using RecyclingBot.Options;
 
 namespace RecyclingBot.Control.Handlers.RecyclingCodeRecognition.CodeRecognition
 {
   public sealed class CodeRecognitionModelController
   {
-    private static readonly Lazy<CodeRecognitionModelController> _lazyInstance 
-      = new Lazy<CodeRecognitionModelController>(() => new CodeRecognitionModelController());
-
     private readonly PredictionEngine<ImageData, ImagePrediction> _predictionEngine;
-
-    public static CodeRecognitionModelController Instance => _lazyInstance.Value;
 
     public bool CanProcessImage => _predictionEngine != null;
 
-    private CodeRecognitionModelController()
+    public CodeRecognitionModelController(IOptions<CustomBotOptions<RecyclingBot>> options)
     {
-      _predictionEngine = null;
+      _predictionEngine = LoadPredictionEngine(options.Value.CodeRecognitionModelFileName);
+    }
+
+    private PredictionEngine<ImageData, ImagePrediction> LoadPredictionEngine(string modelFileName)
+    {
+      try
+      {
+        DataViewSchema modelSchema;
+        MLContext mlContext = new MLContext();
+        ITransformer trainedModel = mlContext.Model.Load(modelFileName, out modelSchema);
+        return mlContext.Model.CreatePredictionEngine<ImageData, ImagePrediction>(trainedModel);
+      }
+      catch
+      {
+        //  Ignore
+      }
+
+      return null;
     }
 
     public CodeRecognitionResult Recognize(ImageData imageData)
