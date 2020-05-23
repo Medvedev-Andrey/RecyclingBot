@@ -1,9 +1,14 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
+using RecyclingBot.Control.Common;
 using RecyclingBot.Control.Common.Photo;
 using RecyclingBot.Control.Handlers.RecyclingCodeRecognition.CodeRecognition;
+using RecyclingBot.Control.Handlers.RecyclingCodeRecognition.RecyclingCodeInfo;
+using RecyclingBot.Control.Handlers.Wiki.FractionsInfo;
+using RecyclingBot.Control.Handlers.Wiki.FractionsInfo.Info;
 using Telegram.Bot.Framework.Abstractions;
 using Telegram.Bot.Types.Enums;
+using Telegram.Bot.Types.ReplyMarkups;
 
 namespace RecyclingBot.Control.Handlers.RecyclingCodeRecognition
 {
@@ -77,10 +82,24 @@ namespace RecyclingBot.Control.Handlers.RecyclingCodeRecognition
           return;
         }
 
-        await context.Bot.Client.SendTextMessageAsync(
-          chatId: context.Update.Message.Chat.Id,
-          text: $"Recognized {codeRecognitionResult.PredictedLabel} with score: {codeRecognitionResult.PredictionScore}"
-        );
+        IRecyclingCodeInfo recyclingCodeInfo;
+        if (!RecyclingCodeInfoWiki.LabelToFractionInfo.TryGetValue(codeRecognitionResult.PredictedLabel, out recyclingCodeInfo))
+        {
+          await context.Bot.Client.SendTextMessageAsync(
+            chatId: context.Update.Message.Chat.Id,
+            text: "Unknown recycling code recognized"
+          );
+
+          return;
+        }
+
+        foreach (string recyclingCodeInfoItem in RecyclingCodeRecognitionHandler.FormatRecyclingCodeInfo(recyclingCodeInfo))
+        {
+          await context.Bot.Client.SendTextMessageAsync(
+            chatId: chatId,
+            text: recyclingCodeInfoItem
+          );
+        }
       }
     }
   }

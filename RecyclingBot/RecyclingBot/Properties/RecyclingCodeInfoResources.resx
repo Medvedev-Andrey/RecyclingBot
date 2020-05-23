@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="OtherRecyclingCode_About" xml:space="preserve">
+    <value>Other plastics, such as acrylic, nylon, polycarbonate, and polylactic acid (a bioplastic also known as PLA), and multilayer combinations of different plastics.</value>
+  </data>
+  <data name="OtherRecyclingCode_Name" xml:space="preserve">
+    <value>OTHER or O</value>
+  </data>
+  <data name="OtherRecyclingCode_RecyclingInfo" xml:space="preserve">
+    <value>Number 7 plastics have traditionally not been recycled, though some curbside programs now take them.</value>
+  </data>
+  <data name="OtherRecyclingCode_Uses" xml:space="preserve">
+    <value>Bottles, plastic lumber applications, headlight lenses, and safety shields/glasses.</value>
+  </data>
+  <data name="PETRecyclingCode_About" xml:space="preserve">
+    <value>Polyethylene terephthalate (sometimes written poly(ethylene terephthalate)), commonly abbreviated PET, PETE, or the obsolete PETP or PET-P, is the most common thermoplastic polymer resin of the polyester family and is used in fibres for clothing, containers for liquids and foods, thermoforming for manufacturing, and in combination with glass fibre for engineering resins.</value>
+  </data>
+  <data name="PETRecyclingCode_Name" xml:space="preserve">
+    <value>PET or PETE</value>
+  </data>
+  <data name="PETRecyclingCode_RecyclingInfo" xml:space="preserve">
+    <value>Picked up through most curbside recycling programs.</value>
+  </data>
+  <data name="PETRecyclingCode_Uses" xml:space="preserve">
+    <value>Polyester fibres (Polar Fleece), thermoformed sheet, strapping, soft drink bottles, tote bags, furniture, carpet, paneling and (occasionally) new containers.</value>
+  </data>
+  <data name="PE_HDRecyclingCode_About" xml:space="preserve">
+    <value>High-density polyethylene (HDPE) or polyethylene high-density (PEHD) is a thermoplastic polymer produced from the monomer ethylene. It is sometimes called "alkathene" or "polythene" when used for HDPE pipes. With a high strength-to-density ratio, HDPE is used in the production of plastic bottles, corrosion-resistant piping, geomembranes and plastic lumber. HDPE is commonly recycled, and has the number "2" as its resin identification code.</value>
+  </data>
+  <data name="PE_HDRecyclingCode_Name" xml:space="preserve">
+    <value>HDPE</value>
+  </data>
+  <data name="PE_HDRecyclingCode_RecyclingInfo" xml:space="preserve">
+    <value>Picked up through most curbside recycling programs, although some allow only those containers with necks.</value>
+  </data>
+  <data name="PE_HDRecyclingCode_Uses" xml:space="preserve">
+    <value>Bottles, grocery bags, milk jugs, recycling bins, agricultural pipe, base cups, car stops, playground equipment, and plastic lumber.</value>
+  </data>
+  <data name="PE_LDRecyclingCode_About" xml:space="preserve">
+    <value>Low-density polyethylene (LDPE) is a thermoplastic made from the monomer ethylene. It was the first grade of polyethylene, produced in 1933 by Imperial Chemical Industries (ICI) using a high pressure process via free radical polymerization. Its manufacture employs the same method today. The EPA estimates 5.7% of LDPE (recycling number 4) is recycled in the United States. Despite competition from more modern polymers, LDPE continues to be an important plastic grade. In 2013 the worldwide LDPE market reached a volume of about US$33 billion.</value>
+  </data>
+  <data name="PE_LDRecyclingCode_Name" xml:space="preserve">
+    <value>LDPE or PE-LD</value>
+  </data>
+  <data name="PE_LDRecyclingCode_RecyclingInfo" xml:space="preserve">
+    <value>LDPE is not often recycled through curbside programs, but some communities will accept it. Plastic shopping and clothes dry cleaning bags can be returned to many stores for recycling.</value>
+  </data>
+  <data name="PE_LDRecyclingCode_Uses" xml:space="preserve">
+    <value>Plastic bags, six pack rings, various containers, dispensing bottles, wash bottles, tubing, and various molded laboratory equipment.</value>
+  </data>
+  <data name="PPRecyclingCode_About" xml:space="preserve">
+    <value>Polypropylene belongs to the group of polyolefins and is partially crystalline and non-polar. Its properties are similar to polyethylene, but it is slightly harder and more heat resistant. It is a white, mechanically rugged material and has a high chemical resistance. Polypropylene is the second-most widely produced commodity plastic (after polyethylene) and it is often used in packaging and labeling. In 2019, the global market for polypropylene was worth $126.03 billion.</value>
+  </data>
+  <data name="PPRecyclingCode_Name" xml:space="preserve">
+    <value>PP</value>
+  </data>
+  <data name="PPRecyclingCode_RecyclingInfo" xml:space="preserve">
+    <value>Number 5 plastics can be recycled through some curbside programs.</value>
+  </data>
+  <data name="PPRecyclingCode_Uses" xml:space="preserve">
+    <value>Auto parts, industrial fibres, food containers, and dishware.</value>
+  </data>
+  <data name="PSRecyclingCode_About" xml:space="preserve">
+    <value>Polystyrene (PS) is a synthetic aromatic hydrocarbon polymer made from the monomer known as styrene. Polystyrene can be solid or foamed. General-purpose polystyrene is clear, hard, and rather brittle. It is an inexpensive resin per unit weight. It is a rather poor barrier to oxygen and water vapour and has a relatively low melting point. Polystyrene is one of the most widely used plastics, the scale of its production being several million tonnes per year. Polystyrene can be naturally transparent, but can be coloured with colourants. Uses include protective packaging (such as packing peanuts and CD and DVD cases), containers, lids, bottles, trays, tumblers, disposable cutlery and in the making of models.</value>
+  </data>
+  <data name="PSRecyclingCode_Name" xml:space="preserve">
+    <value>PS</value>
+  </data>
+  <data name="PSRecyclingCode_RecyclingInfo" xml:space="preserve">
+    <value>Number 6 plastics can be recycled through some curbside programs.</value>
+  </data>
+  <data name="PSRecyclingCode_Uses" xml:space="preserve">
+    <value>Desk accessories, cafeteria trays, plastic utensils, coffee cup lids, toys, video cassettes and cases, clamshell containers, packaging peanuts, and insulation board and other expanded polystyrene products (e.g., Styrofoam).</value>
+  </data>
+  <data name="PVCRecyclingCode_About" xml:space="preserve">
+    <value>PVC comes in two basic forms: rigid (sometimes abbreviated as RPVC) and flexible. The rigid form of PVC is used in construction for pipe and in profile applications such as doors and windows. It is also used in making bottles, non-food packaging, food-covering sheets, and cards (such as bank or membership cards). It can be made softer and more flexible by the addition of plasticizers, the most widely used being phthalates. In this form, it is also used in plumbing, electrical cable insulation, imitation leather, flooring, signage, phonograph records, inflatable products, and many applications where it replaces rubber. With cotton or linen, it is used in the production of canvas.</value>
+  </data>
+  <data name="PVCRecyclingCode_Name" xml:space="preserve">
+    <value>PVC or V</value>
+  </data>
+  <data name="PVCRecyclingCode_RecyclingInfo" xml:space="preserve">
+    <value>Recycled 740,000 tonnes in 2018 through Vinyl 2010 and VinylPlus initiatives.</value>
+  </data>
+  <data name="PVCRecyclingCode_Uses" xml:space="preserve">
+    <value>Pipe, window profile, siding, fencing, flooring, shower curtains, lawn chairs, non-food bottles, and children's toys.</value>
+  </data>
+</root>

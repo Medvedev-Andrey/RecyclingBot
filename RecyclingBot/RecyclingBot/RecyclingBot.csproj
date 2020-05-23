@@ -22,12 +22,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>FractionInfoResources.resx</DependentUpon>
     </Compile>
+    <Compile Update="Properties\RecyclingCodeInfoResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RecyclingCodeInfoResources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Update="Properties\FractionInfoResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>FractionInfoResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\RecyclingCodeInfoResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RecyclingCodeInfoResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

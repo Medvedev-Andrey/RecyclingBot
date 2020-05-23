@@ -1,7 +1,9 @@
-﻿using RecyclingBot.Control.Common;
-using RecyclingBot.Control.Common.Markup;
+﻿using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using RecyclingBot.Control.Common;
+using RecyclingBot.Control.Common.Markup;
+using RecyclingBot.Control.Handlers.RecyclingCodeRecognition.RecyclingCodeInfo;
 using Telegram.Bot.Framework.Abstractions;
 using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types.ReplyMarkups;
@@ -58,6 +60,14 @@ namespace RecyclingBot.Control.Handlers.RecyclingCodeRecognition
 
           break;
         }
+      }
+    }
+
+    internal static IEnumerable<string> FormatRecyclingCodeInfo(IRecyclingCodeInfo recyclingCodeInfo)
+    {
+      foreach (string recyclingCodeInfoItem in recyclingCodeInfo.AllInfo)
+      {
+        yield return recyclingCodeInfoItem;
       }
     }
   }
